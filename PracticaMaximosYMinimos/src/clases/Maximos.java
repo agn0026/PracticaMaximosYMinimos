@@ -9,8 +9,10 @@ public class Maximos {
 	 * @param num2
 	 * 
 	 * @return el numero maximo de dos numeros enteros positivos
+	 * 
+	 * @throws IllegalArgumentException
 	 */
-	public static int MaximoDe2EnterosPositivos (int num1, int num2) {
+	public static int MaximoDe2EnterosPositivos (int num1, int num2) throws IllegalArgumentException{
 		if (num1>=0 && num2>=0) {
 			if(num1>num2) {
 				return num1;
@@ -20,7 +22,7 @@ public class Maximos {
 				return num1; //enviar cualquiera para mostrar que es igual
 			}
 		}else {
-			return 0; 	
+			throw new IllegalArgumentException ("Alguno de los numeros es menor que 0");	
 		}
 	}
 	
@@ -32,8 +34,10 @@ public class Maximos {
 	 * @param num3
 	 * 
 	 * @return el numero maximo de tres numeros enteros positivos
+	 * 
+	 * @throws IllegalArgumentException
 	 */
-	public static int MaximoDe3EnterosPositivos (int num1, int num2, int num3) {
+	public static int MaximoDe3EnterosPositivos (int num1, int num2, int num3) throws IllegalArgumentException{
 		if (num1>=0 && num2>=0 && num3>=0) {
 			if(num1>num2 && num1>num3) {
 				return num1;
@@ -45,7 +49,7 @@ public class Maximos {
 				return num1; //enviar cualquiera para mostrar que es igual
 			}
 		}else {
-			return 0; 	
+			throw new IllegalArgumentException ("Alguno de los numeros es menor que 0");		
 		}
 	}
 
